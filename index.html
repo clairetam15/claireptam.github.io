@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head> 
-    <meta charset="UTF-8">
-    <title>Claire Tam</title>
-    <style>
+    <meta charset="UTF-8"> <!-- in every HTML file made, translates code -> letters properly -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- rescales for phones -->
+    <title>Claire Tam</title> <!-- google uses this as clickable headline -->
+    <!-- insert to be able to play around with fonts (next 3 lines) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <style> /* this is where all the styling stuff goes */
       nav ul {
       display: flex;               
       list-style-type: none;      
-      background-color: rgb(92, 67, 64);   
+      background-color: rgb(92, 67, 64); 
       padding: 15px;
       margin: 0;
     }
@@ -18,9 +24,16 @@
         color: rgb(235, 216, 213);               
         text-decoration: none;
       }
+      body {
+      font-family: "Nunito", sans-serif;
+      background-color: rgb(224, 191, 184);
+      }
+      h1 {
+     font-family: "Playfair Display", serif;
+      }
     </style>
   </head>
-  <body style="background-color: rgb(224, 191, 184);">
+  <body>
     <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -29,7 +42,8 @@
     </ul>
   </nav>
     <h1>Claire Tam</h1>
-    <p>I am a mechanical engineering student at the University of Notre Dame.</p>
-    <img src="profilePic.jpg" alt="Profile Picture" style="width:30%">
+    <p>I am a mechanical engineering student and undergraduate researcher at the University of Notre Dame.</p>
+    <!-- insert image but scale size appropriately for both desktop and phones (alt is used for accessibility, height is set to automatically adjust to OG proportions) -->
+    <img src="profilePic.jpg" alt="Profile Picture" style="width: 300px; max-width: 80%; height: auto;">
   </body>
 </html>
