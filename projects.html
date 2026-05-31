@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Claire Tam</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+      /* --- pasted from Gemini but should be similar on home page - styling --- */
+      body {
+        font-family: "Nunito", sans-serif;
+        background-color: rgb(31, 26, 25);
+        margin: 20px;
+      }
+      h1, h2, h3 {
+        font-family: "Playfair Display", serif;
+        color: rgb(92, 67, 64);
+      }
+      nav ul {
+        display: flex;              
+        list-style-type: none;      
+        background-color: rgb(92, 67, 64); 
+        padding: 15px;
+        margin: 0 0 30px 0;
+        border-radius: 12px;
+      }
+      nav li {
+        margin-right: 20px;
+      }
+      nav a {
+        color: rgb(235, 216, 213);              
+        text-decoration: none;
+      }
+
+      /* --- Portfolio Gallery Layout --- */
+      .projects-gallery {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        max-width: 800px; /* Limits width so long text is easy to read */
+        margin: 0 auto;
+      }
+
+      /* Update your project-card class to look like this */
+      .project-card {
+        background-color: rgb(240, 228, 214);
+        border-radius: 16px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+  
+        /* Creates a horizontal layout for desktop */
+        display: flex; 
+        flex-direction: row; 
+        width: 100%;
+      }
+
+      /* Fixes the image to the left side cleanly */
+      .project-card img {
+        width: 100%;          /* Takes up roughly a third of the card width */
+        max-height: 100%;    /* Fills the height of the card */
+        object-fit: cover;
+        border-radius: 16px 0 0 16px; /* Rounds only the left corners */
+      }
+
+      /* Wraps the text areas */
+      .card-content {
+        padding: 25px;
+        width: 65%;          /* Takes up the remaining two-thirds of the card */
+      }
+      
+      /* makes responsive layout for phones (more vertical) */
+      @media (max-width: 600px) {
+        .project-card {
+          flex-direction: column; /* Switches to vertical stack on mobile phones */
+        }
+        
+        .project-card img {
+          width: 35%;            /* Takes up full width on small screens */
+          height: 200px;          /* Sets a nice, visible height for mobile */
+          border-radius: 16px 16px 0 0; /* Rounds the top corners instead of left */
+        }
+
+        .card-content {
+          width: 100%;            /* Text fills the width beneath the image */
+          box-sizing: border-box; /* Keeps padding inside the card borders */
+        }
+      }
+      <style>
+  <head>
+
+  <body>
+      <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html" style="text-decoration: underline;">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+<html>
