@@ -53,6 +53,7 @@
 
       /* Update your project-card class to look like this */
       .project-card {
+        align-items: flex-start;
         background-color: rgb(240, 228, 214);
         border-radius: 16px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -66,27 +67,27 @@
 
       /* Fixes the image to the left side cleanly */
       .project-card > img {
-        width: 55%;
+        width: 45%;
         object-fit: contain;
-        border-radius: 16px 0 0 16px;
     }
 
       /* Wraps the text areas */
       .card-content {
         padding: 25px;
-        width: 45%;          /* Takes up the remaining two-thirds of the card */
+        width: 55%;          /* Takes up the remaining two-thirds of the card */
       }
       
       /* makes responsive layout for phones (more vertical) */
       @media (max-width: 600px) {
         .project-card {
           flex-direction: column; /* Switches to vertical stack on mobile phones */
+          border-radius: 16px;
+          overflow: hidden;
         }
         
         .project-card img {
           width: 100%;            /* Takes up full width on small screens */
           height: 200px;          /* Sets a nice, visible height for mobile */
-          border-radius: 16px 16px 0 0; /* Rounds the top corners instead of left */
         }
 
         .card-content {
