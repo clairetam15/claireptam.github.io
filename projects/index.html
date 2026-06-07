@@ -9,14 +9,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 
     <style>
-      /* --- pasted from Gemini but should be similar on home page - styling --- */
+      /* --- pasted from Gemini/Chat but should be similar on home page - styling --- */
+      /* global body text (outside cards) */
       body {
         font-family: "Nunito", sans-serif;
         background-color: rgb(31, 26, 25);
         margin: 20px;
-      }
-      p {
         color: rgb(237, 237, 204);
+      }
+
+      /* override inside cards */
+      .project-card p {
+        color: rgb(60, 45, 40);
       }
       h1, h2, h3 {
         font-family: "Playfair Display", serif;
@@ -62,15 +66,15 @@
 
       /* Fixes the image to the left side cleanly */
       .project-card > img {
-        width: 35%;
-        object-fit: cover;
+        width: 55%;
+        object-fit: contain;
         border-radius: 16px 0 0 16px;
     }
 
       /* Wraps the text areas */
       .card-content {
         padding: 25px;
-        width: 65%;          /* Takes up the remaining two-thirds of the card */
+        width: 45%;          /* Takes up the remaining two-thirds of the card */
       }
       
       /* makes responsive layout for phones (more vertical) */
