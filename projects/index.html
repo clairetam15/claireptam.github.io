@@ -76,23 +76,41 @@
         padding: 25px;
         width: 55%;          /* Takes up the remaining two-thirds of the card */
       }
+
+      .story-img {
+        display: block;
+        width: 100%;
+        max-width: 400px; /* Gives the inline photos a nice uniform display size */
+        height: auto;
+        margin: 15px 0;
+        border-radius: 8px; /* Softens the corners to match your page vibe */
+      }
       
       /* makes responsive layout for phones (more vertical) */
-      @media (max-width: 600px) {
+      @media (max-width: 768px) {
+        body {
+          margin: 10px; /* Gives you more precious horizontal screen space on small devices */
+        }
+        
         .project-card {
           flex-direction: column; /* Switches to vertical stack on mobile phones */
           border-radius: 16px;
           overflow: hidden;
         }
         
-        .project-card img {
+        .project-card > img {
           width: 100%;            /* Takes up full width on small screens */
-          height: 200px;          /* Sets a nice, visible height for mobile */
+          max-height: 450px;      /* Sets a nice, visible height for mobile */
+          object-fit: cover;
         }
 
         .card-content {
           width: 100%;            /* Text fills the width beneath the image */
           box-sizing: border-box; /* Keeps padding inside the card borders */
+        }
+
+        .story-img {
+          max-width: 100%; /* Ensures inline images shrink safely to stay inside your padding boundaries */
         }
       }
       </style>
