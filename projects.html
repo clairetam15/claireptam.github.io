@@ -58,12 +58,11 @@
       }
 
       /* Fixes the image to the left side cleanly */
-      .project-card img {
-        width: 100%;          /* Takes up roughly a third of the card width */
-        max-height: 100%;    /* Fills the height of the card */
+      .project-card > img {
+        width: 35%;
         object-fit: cover;
-        border-radius: 16px 0 0 16px; /* Rounds only the left corners */
-      }
+        border-radius: 16px 0 0 16px;
+    }
 
       /* Wraps the text areas */
       .card-content {
@@ -78,7 +77,7 @@
         }
         
         .project-card img {
-          width: 35%;            /* Takes up full width on small screens */
+          width: 100%;            /* Takes up full width on small screens */
           height: 200px;          /* Sets a nice, visible height for mobile */
           border-radius: 16px 16px 0 0; /* Rounds the top corners instead of left */
         }
@@ -88,8 +87,8 @@
           box-sizing: border-box; /* Keeps padding inside the card borders */
         }
       }
-      <style>
-  <head>
+      </style>
+  </head>
 
   <body>
       <nav>
@@ -97,7 +96,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="https://www.linkedin.com/in/claire-tam-notredame/" target="_blank">LinkedIn</a></li>
         <li><a href="mailto:ctam@nd.edu">Contact</a></li>
-        <li><a href="projects.html">Technical Projects</a><li>
+        <li><a href="projects.html">Technical Projects</a></li>
       </ul>
     </nav>
 
@@ -110,18 +109,24 @@
   <main class="projects-gallery">
 
       <div class="project-card">
-        <img src="https://picsum.photos/600/400?random=1" alt="Project One Image">
+        <img src="orgLeft.jpg" alt="Side of organizer with a Japanese Torii gate">
         <div class="card-content">
           <h3>Desk Organizer | May 2026 </h3>
           <p>Aside from my shoes clustered together, my floor is always pretty clean. But my desk? An absolute nightmare. The thing is, in a college dorm room, there's not much space.</p>
+          <!-- insert image but scale size appropriately for both desktop and phones (alt is used for accessibility, height is set to automatically adjust to OG proportions) -->
+          <img src="deskMessy.jpg" alt="Profile Picture" style="width: 300px; max-width: 80%; height: auto;">
           <p>Naturally, the first place I turned to was the Internet. Desk organizers are everywhere. TikTok is full of videos of dreamy dorm rooms where everything is neatly organized. My issue? </p>
           <p>I couldn't find organizers that worked for my high-frequency use items. I bought a pan to cook with for the summer and two spatulas that were taking up so much space on my desk. My sunscreen was shoved into a drawer, causing me to forget to put it on some mornings.</p>
           <p>You likely get the point. I wanted to be able to work at my own desk. Most organizers are made for makeup or pencils or kitchenware, but the reality is, the dorm room just doesn't have that much space. I wanted the compartments to be varying sizes, and to not perpetuate my own bad habits, I wanted everything in the organizer to be visible. To conserve space, I also wanted multiple levels to be able to store my pan. </p>
           <p>Finding no luck on the Internet, I remembered that 3D printers existed on my college campus and figured, why not make my own? </p>
           <p>The pan was the biggest size constraint and took up the most space on my desk. I figured that would decide the organizer's dimensions, since I intended for that to fit on its own shelf under everything. Then I started the CAD model in SOLIDWORKS, using a tiered layout to ensure everything was visible and account for the sizing of my various items. </p>
+          <img src="cadOrg.png" alt="Profile Picture" style="width: 300px; max-width: 80%; height: auto;">
           <p>I 3D-printed the organizer using ABS, and due to a classic scaling issue with the .STL file, the first iteration wasn't exactly ideal. The organizer was two inches too small to accommodate my pan (it's okay, I painted it to resemble a piano and gave it to my mom). </p> 
           <p>While making the scaling changes, inspiration struck to add more details. Most organizers online are pretty generic, either wooden or a plain color, no personality involved. If I was designing this, I might as well make it clear it's mine. I added an engraving of my initials in a corner, and Japanese minimalist-inspired designs on the sides, since I love to travel and Japan's at the top of my bucket list. For the fun of it, I painted the organizer to my liking. </p>
           <p>This looks much better now, doesn't it? And my skin will thank me in a few decades when I don't get wrinkles. </p>
+          <img src="cleanDesk.jpg" alt="Profile Picture" style="width: 300px; max-width: 80%; height: auto;">
       </div>
-      </div>
-<html>
+    </div>
+  </main>
+</body>
+</html>
