@@ -35,16 +35,72 @@
         text-decoration: none;
       }
       body {
-      font-family: "Nunito", sans-serif;
-      background-color: rgb(224, 191, 184);
+        font-family: "Nunito", sans-serif;
+        background-color: rgb(224, 191, 184);
+        margin: 0;
+        padding: 10px;
       }
       h1 {
      font-family: "Playfair Display", serif;
       }
-      /* make rounded corners for images (responsive sizing) */
-      img {
-        border-radius: 16px;
+      /* this is the styling for the card that holds the text and the photo*/
+      .hero {
+        max-width: 1100px;
+        margin: 70px auto;
+        padding: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 50px;
+        background-color: rgb(238, 224, 213);
+        border-radius: 24px;
       }
+      .hero-text {
+        max-width: 600px;
+      }
+      /* for my short description */
+      .tagline {
+        font-size: 22px;
+        font-weight: 600;
+        color: rgb(92, 67, 64);
+      }
+      .hero p {
+        font-size: 18px;
+        line-height: 1.6;
+      }
+      .hero img {
+        width: 350px;
+        max-width: 100%;
+        height: auto;
+        border-radius: 18px;
+      }
+      .buttons {
+        margin-top: 25px;
+      }
+
+      .button {
+        display: inline-block;
+        margin-right: 12px;
+        padding: 12px 18px;
+        background-color: rgb(92, 67, 64);
+        color: rgb(235, 216, 213);
+        text-decoration: none;
+        border-radius: 10px;
+        font-weight: 600;
+      }
+
+      @media (max-width: 800px) {
+        .hero {
+          flex-direction: column;
+          text-align: center;
+          padding: 30px;
+        }
+
+        h1 {
+          font-size: 38px;
+        }
+      }
+      
     </style>
   </head>
   <body>
@@ -56,10 +112,20 @@
       <li><a href="mailto:ctam@nd.edu">Contact</a></li>
     </ul>
   </nav>
-    <h1>Claire Tam</h1>
-    <p>I am a mechanical engineering student and undergraduate researcher at the University of Notre Dame. I am from Toledo, Ohio and will be graduating with the class of 2027. </p>
-    <p>My research experience spans robotics, automation, biosensors, and bacterial culturing. I hope to explore further by pursuing a PhD in bioengineering!</p>
-    <!-- insert image but scale size appropriately for both desktop and phones (alt is used for accessibility, height is set to automatically adjust to OG proportions) -->
-    <img src="profilePic.jpg" alt="Profile Picture" style="width: 300px; max-width: 80%; height: auto;">
+    <!-- make hero card and put everything else inside -->
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Claire Tam</h1>
+        <p class="tagline">
+          Mechanical Engineering Student and Undergraduate Researcher
+        </p>
+        <p>I will be graduating in Spring 2027 from the University of Notre Dame. My research experience spans robotics, automation, biosensors, and bacterial culturing. I hope to explore further by pursuing a PhD in bioengineering!.</p>
+        <div class="buttons">
+          <a class="button" href="projects/index.html">View Projects</a>
+          <a class="button" href="https://www.linkedin.com/in/claire-tam-notredame/" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+      <img src="profilePic.jpg" alt="Profile Picture">
+    </section>
   </body>
 </html>
