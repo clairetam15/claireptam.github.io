@@ -108,12 +108,21 @@
        
         nav ul {
           padding: 10px 6px;
-          justify-content: space-between;
+          justify-content: space-around;
         }
 
         nav li {
           margin-right: 0; /* Clears desktop margins so flexbox can balance spacing */
         }
+
+        nav a {
+          display: inline-block;      /* Allows text alignment properties to work */
+          text-align: center;         /* CRITICAL: Centers "Projects" directly underneath "Technical" */
+          line-height: 1.2;           /* Pulls the two stacked words slightly closer for a clean look */
+          font-size: 16px;            /* Keeps your exact preferred text size */
+          padding: 8px 4px;           /* Restricts side padding so items have maximum room to wrap */
+        }
+        
         h1 {
           font-size: 38px;
         }
